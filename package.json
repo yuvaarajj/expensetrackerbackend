@@ -1,0 +1,21 @@
+{
+  "name": "expensetracketbackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "expensetracketbackend": "file:",
+    "express": "^4.21.2",
+    "mongoose": "^8.10.1"
+  }
+}

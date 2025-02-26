@@ -43,17 +43,6 @@ app.post('/register', async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10)
     user = new User({name, email, password: hashedPassword})
 
- // Generate Token
- const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: "1h" });
-
- // Set Cookie
- res.cookie("token", token, { 
-   httpOnly: true, 
-   secure: "production", // Set to `true` in production (HTTPS)
-   sameSite: "strict",
-   maxAge: 3600000 // 1 hour
- });
-
     await user.save()
     res.status(201).json({ msg: "User registered successfully" });
 
